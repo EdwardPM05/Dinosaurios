@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ámbar — Un viaje por el Mesozoico</title>
+    <meta
+      name="description"
+      content="Una expedición inmersiva por las eras de los dinosaurios."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="excavation.css" />
+    <link rel="stylesheet" href="species-cards.css" />
+    <link rel="stylesheet" href="period-cards.css" />
+  </head>
+  <body>
+    <div class="progress"><i></i></div>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="#top"
+        ><span class="brand-orbit">A</span><span>ÁMBAR</span></a
+      >
+      <nav aria-label="Navegación principal">
+        <a href="#eras">Eras</a><a href="#dosier">Especies</a
+        ><a href="#huella">Registro</a>
+      </nav>
+      <a class="round-link" href="#eras" aria-label="Iniciar expedición">↓</a>
+    </header>
+    <main id="top">
+      <section class="hero scene">
+        <canvas class="hero-three" aria-hidden="true"></canvas>
+        <div class="hero-image parallax" data-speed="-.10"></div>
+        <div class="hero-vignette"></div>
+        <div class="hero-orb orb-one"></div>
+        <div class="hero-copy reveal">
+          <p class="kicker"><span></span> Archivo mesozoico · 252—66 Ma</p>
+          <h1>Cuando el mundo<br />era <em>salvaje.</em></h1>
+          <p class="hero-lede">
+            Desciende por tres épocas en las que la Tierra no conocía límites.
+            Todo lo que queda hoy es una huella, un fósil y una pregunta.
+          </p>
+          <a class="cta" href="#eras"
+            ><span>Comenzar el descenso</span><b>↓</b></a
+          >
+        </div>
+        <div class="hero-meta">
+          <span>01 / 04</span><span>Desliza para descubrir</span>
+        </div>
+        <div class="hero-signal"><span></span><span></span><span></span></div>
+      </section>
+      <section class="manifesto" aria-label="Manifiesto">
+        <p class="split-line" data-stagger-line="No fue un mundo perdido.">
+          No fue un mundo perdido.
+        </p>
+        <p
+          class="split-line italic"
+          data-stagger-line="Fue un mundo que todavía late."
+          data-italic-word="late."
+        >
+          Fue un mundo que todavía <i>late.</i>
+        </p>
+        <button
+          class="manifesto-replay"
+          type="button"
+          aria-label="Repetir animación del manifiesto"
+        >
+          Repetir <span>↻</span>
+        </button>
+      </section>
+      <section class="amber-section">
+        <div class="amber-copy reveal">
+          <p class="kicker"><span></span> Cápsula del tiempo</p>
+          <h2>Una gota de<br /><em>eternidad.</em></h2>
+          <p>
+            La resina atrapó alas, polen y minúsculos fragmentos del mundo
+            antiguo. Cada pieza de ámbar es una ventana sellada al Mesozoico.
+          </p>
+          <span>Resina fosilizada · 99 Ma</span>
+        </div>
+        <div class="amber-art parallax" data-speed="-.04"></div>
+      </section>
+      <section class="eras" id="eras">
+        <div class="eras-intro reveal">
+          <p class="kicker"><span></span> La cronología</p>
+          <h2>La Tierra cambió<br />de piel <em>tres veces.</em></h2>
+          <p>
+            Recorre las capas. Cada era guarda su propia luz, escala y manera de
+            sobrevivir.
+          </p>
+        </div>
+        <article class="era-panel triassic">
+          <div class="era-art parallax" data-speed=".035"></div>
+          <div class="era-shade"></div>
+          <div class="era-content reveal">
+            <p class="era-index">I — 252 / 201 Ma</p>
+            <h3>Triásico</h3>
+            <p>
+              Un continente, un horizonte inmenso. En la tierra roja de Pangea,
+              los primeros dinosaurios aprenden a correr antes de conquistar el
+              planeta.
+            </p>
+            <div class="facts">
+              <span><b>15 kg</b>tamaño típico</span
+              ><span><b>Pangea</b>un solo continente</span>
+            </div>
+          </div>
+          <div class="era-number">01</div>
+        </article>
+        <article class="era-panel jurassic">
+          <div class="era-art parallax" data-speed="-.045"></div>
+          <div class="era-shade"></div>
+          <div class="era-content reveal">
+            <p class="era-index">II — 201 / 145 Ma</p>
+            <h3>Jurásico</h3>
+            <p>
+              El aire se vuelve verde y húmedo. Los gigantes estiran el cuello
+              entre las coníferas: ningún animal terrestre volverá a ocupar
+              tanto espacio.
+            </p>
+            <div class="facts">
+              <span><b>25 m</b>saurópodo más largo</span
+              ><span><b>Denso</b>bosques de coníferas</span>
+            </div>
+          </div>
+          <div class="era-number">02</div>
+        </article>
+        <article class="era-panel cretaceous">
+          <div class="era-art parallax" data-speed=".05"></div>
+          <div class="era-shade"></div>
+          <div class="era-content reveal">
+            <p class="era-index">III — 145 / 66 Ma</p>
+            <h3>Cretácico</h3>
+            <p>
+              Las flores cubren el suelo. La vida alcanza su mayor extravagancia
+              justo antes de que un destello en el cielo cambie el rumbo de
+              todo.
+            </p>
+            <div class="facts">
+              <span><b>10 km</b>ancho del asteroide</span
+              ><span><b>75%</b>vida extinguida</span>
+            </div>
+          </div>
+          <div class="era-number">03</div>
+        </article>
+      </section>
+      <section class="excavation" id="excavacion">
+        <div class="excavation-sticky">
+          <div class="excavation-copy">
+            <p class="kicker"><span></span> Laboratorio de fósiles</p>
+            <h2>Arma el<br /><em>gigante.</em></h2>
+            <p>
+              Desliza lentamente: el esqueleto emerge de la roca. Luego toca un
+              hueso para investigar.
+            </p>
+            <div class="bone-note" aria-live="polite">
+              <b id="boneName">Aún bajo tierra</b
+              ><span id="boneText"
+                >El registro fósil se revela capa por capa.</span
+              >
+            </div>
+          </div>
+          <div class="bone-progress">
+            <span></span><i id="bonePercent">0%</i>
+          </div>
+          <div class="skeleton-stage">
+            <div class="skeleton-track">
+              <img
+                class="skeleton-illustration fossil-specimen"
+                src="assets/images/trex-skeleton-v2.png"
+                alt="Esqueleto fósil de Tyrannosaurus rex"
+              />
+              <img
+                class="skeleton-illustration fossil-specimen"
+                src="assets/images/triceratops-skeleton.png"
+                alt="Esqueleto fósil de Triceratops"
+              />
+              <img
+                class="skeleton-illustration fossil-specimen"
+                src="assets/images/velociraptor-skeleton.png"
+                alt="Esqueleto fósil de Velociraptor"
+              />
+            </div>
+            <svg
+              id="skeleton"
+              viewBox="0 0 900 470"
+              role="img"
+              aria-label="Esqueleto interactivo de un dinosaurio"
+            >
+              <g
+                class="bone skull"
+                tabindex="0"
+                role="button"
+                data-name="Cráneo"
+                data-text="La cabeza concentra una dentadura hecha para desgarrar carne."
+              >
+                <path
+                  d="M688 120c38-22 92-14 116 19l-9 36-87 6-32-21zM755 148l64 6-31 19-29-5zM711 168l-14 20m35-19-6 23m28-22 2 20"
+                />
+              </g>
+              <g
+                class="bone spine"
+                tabindex="0"
+                role="button"
+                data-name="Columna vertebral"
+                data-text="Más de 50 vértebras sostenían el peso, la cola y el equilibrio."
+              >
+                <path d="M275 211 C355 162 445 190 530 166 S647 130 700 153" />
+                <path
+                  d="M298 199l-8 29m36-44-5 32m39-36-5 29m40-22-4 28m39-31-3 28m38-31-3 28m39-34-2 29m37-36 1 30m37-39 3 30"
+                />
+              </g>
+              <g
+                class="bone ribs"
+                tabindex="0"
+                role="button"
+                data-name="Caja torácica"
+                data-text="Las costillas protegían órganos enormes durante cada carrera."
+              >
+                <path
+                  d="M405 191c-11 48 10 95 43 107m-12-111c-11 53 14 99 47 108m-12-111c-8 48 15 88 44 99m-9-108c-4 44 15 77 38 91m-5-101c1 38 18 64 34 77"
+                />
+                <path d="M410 289c38 11 83 3 121-23" />
+              </g>
+              <g
+                class="bone tail"
+                tabindex="0"
+                role="button"
+                data-name="Cola"
+                data-text="La cola larga compensaba el peso del torso y daba estabilidad al movimiento."
+              >
+                <path d="M285 207C211 223 125 220 47 185c-18-8-31-22-36-42" />
+                <path
+                  d="M251 214l-8 22m-35-14-9 20m-35-15-10 18m-37-19-10 16m-34-23-11 14m-31-30-10 12"
+                />
+              </g>
+              <g
+                class="bone legs"
+                tabindex="0"
+                role="button"
+                data-name="Patas traseras"
+                data-text="Huesos largos y fuertes: el motor de un depredador bípedo."
+              >
+                <path
+                  d="M455 286l-32 100 40 48m-40-48-41 48m112-152 23 100-31 53m31-53 45 34"
+                />
+                <path d="M383 434h82m25 1h76" />
+              </g>
+              <g
+                class="bone arms"
+                tabindex="0"
+                role="button"
+                data-name="Extremidades delanteras"
+                data-text="Brazos pequeños, pero firmes y rematados con garras."
+              >
+                <path d="M578 211l26 65 34 17m-35-17 10 41m-10-41 41-11" />
+              </g>
+            </svg>
+            <div class="dust dust-a"></div>
+            <div class="dust dust-b"></div>
+          </div>
+        </div>
+      </section>
+      <section class="dosier" id="dosier">
+        <div class="dosier-head reveal">
+          <p class="kicker"><span></span> Dosier de campo</p>
+          <h2>Seis formas de<br />ser <em>enorme.</em></h2>
+          <p>Acerca el cursor. Cada expedición comienza con mirar de cerca.</p>
+        </div>
+        <div class="species-grid">
+          <button
+            class="species-card reveal"
+            aria-label="Abrir ficha de Tyrannosaurus rex"
+          >
+            <span class="species-face"
+              ><i>01 · Carnívoro</i><strong>Tyrannosaurus<br />rex</strong
+              ><small>Cretácico tardío</small><b>↗</b></span
+            ><span class="species-back"
+              ><i>01 · Archivo de campo</i><strong>12—13 m</strong
+              ><span>Mordida de 35 000 N<br />Norteamérica</span><b>↩</b></span
+            >
+          </button>
+          <button
+            class="species-card reveal"
+            aria-label="Abrir ficha de Triceratops"
+          >
+            <span class="species-face"
+              ><i>02 · Herbívoro</i><strong>Triceratops<br />horridus</strong
+              ><small>Cretácico tardío</small><b>↗</b></span
+            ><span class="species-back"
+              ><i>02 · Archivo de campo</i><strong>8—9 m</strong
+              ><span>Tres cuernos · 6 000 kg<br />Norteamérica</span
+              ><b>↩</b></span
+            >
+          </button>
+          <button
+            class="species-card reveal"
+            aria-label="Abrir ficha de Velociraptor"
+          >
+            <span class="species-face"
+              ><i>03 · Carnívoro</i
+              ><strong>Velociraptor<br />mongoliensis</strong
+              ><small>Cretácico tardío</small><b>↗</b></span
+            ><span class="species-back"
+              ><i>03 · Archivo de campo</i><strong>1.5—2 m</strong
+              ><span>Garra curva de 6.5 cm<br />Mongolia</span><b>↩</b></span
+            >
+          </button>
+          <button
+            class="species-card reveal"
+            aria-label="Abrir ficha de Stegosaurus"
+          >
+            <span class="species-face"
+              ><i>04 · Herbívoro</i><strong>Stegosaurus<br />stenops</strong
+              ><small>Jurásico tardío</small><b>↗</b></span
+            ><span class="species-back"
+              ><i>04 · Archivo de campo</i><strong>7—9 m</strong
+              ><span>17 placas · 3 500 kg<br />Norteamérica</span><b>↩</b></span
+            >
+          </button>
+          <button
+            class="species-card reveal"
+            aria-label="Abrir ficha de Brachiosaurus"
+          >
+            <span class="species-face"
+              ><i>05 · Herbívoro</i
+              ><strong>Brachiosaurus<br />altithorax</strong
+              ><small>Jurásico tardío</small><b>↗</b></span
+            ><span class="species-back"
+              ><i>05 · Archivo de campo</i><strong>~21 m</strong
+              ><span>Cuello de 9 m · 35 toneladas<br />Norteamérica</span
+              ><b>↩</b></span
+            >
+          </button>
+          <button
+            class="species-card reveal"
+            aria-label="Abrir ficha de Spinosaurus"
+          >
+            <span class="species-face"
+              ><i>06 · Carnívoro</i><strong>Spinosaurus<br />aegyptiacus</strong
+              ><small>Cretácico medio</small><b>↗</b></span
+            ><span class="species-back"
+              ><i>06 · Archivo de campo</i><strong>~15 m</strong
+              ><span>Semiacuático · 7 400 kg<br />África del Norte</span
+              ><b>↩</b></span
+            >
+          </button>
+        </div>
+      </section>
+      <section class="huella" id="huella">
+        <div class="surface-glow"></div>
+        <div class="surface-strata"><i></i><i></i><i></i><i></i></div>
+        <div class="huella-content reveal">
+          <p class="kicker"><span></span> Fin de la expedición</p>
+          <p
+            class="big-stat surface-title"
+            data-surface-title="La luz te espera arriba."
+          >
+            La luz<br /><b>te espera arriba.</b>
+          </p>
+          <p>
+            Has cruzado 186 millones de años. La Tierra que vuelves a pisar
+            todavía guarda sus gigantes bajo los pies.
+          </p>
+          <a href="#top" class="cta light"
+            ><span>Volver a la superficie</span><b>↑</b></a
+          >
+        </div>
+        <p class="surface-coordinates">00° 00' 00'' N · AHORA</p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+    <script type="module" src="three-scene.js"></script>
+  </body>
+</html>

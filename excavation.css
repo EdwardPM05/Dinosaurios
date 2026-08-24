@@ -1,0 +1,219 @@
+.excavation {
+  height: 240vh;
+  background: #c4945e;
+  position: relative;
+}
+.excavation-sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1.4fr);
+  align-items: center;
+  padding: 8vw;
+  background: radial-gradient(
+    circle at 70% 52%,
+    #e8c987 0,
+    #c49058 42%,
+    #573d2b 115%
+  );
+}
+.excavation-sticky:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.33;
+  background-image: radial-gradient(#3e291d 1px, transparent 1px);
+  background-size: 10px 10px;
+  mix-blend-mode: multiply;
+}
+.excavation-copy {
+  position: relative;
+  z-index: 2;
+  color: #231a13;
+}
+.excavation-copy .kicker {
+  color: #5a3422;
+}
+.excavation-copy h2 {
+  font-size: clamp(3.3rem, 6vw, 7rem);
+  line-height: 0.84;
+  letter-spacing: -0.08em;
+  margin: 0;
+}
+.excavation-copy h2 em {
+  font-family: var(--serif);
+  font-weight: 500;
+}
+.excavation-copy > p:not(.kicker) {
+  max-width: 285px;
+  margin: 28px 0;
+  color: #5d4030;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.bone-note {
+  min-height: 76px;
+  max-width: 300px;
+  border-top: 1px solid #704a32;
+  padding-top: 13px;
+  display: grid;
+  gap: 5px;
+}
+.bone-note b {
+  font-size: 15px;
+}
+.bone-note span {
+  font: 10px/1.55 var(--mono);
+  color: #704a32;
+}
+.bone-progress {
+  position: absolute;
+  left: 8vw;
+  bottom: 9vh;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #553624;
+  font: 10px var(--mono);
+}
+.bone-progress span {
+  display: block;
+  width: 105px;
+  height: 2px;
+  background: #714a33;
+  overflow: hidden;
+}
+.bone-progress span:after {
+  content: "";
+  display: block;
+  width: calc(var(--bone-build, 0) * 100%);
+  height: 100%;
+  background: #eaff67;
+  transition: width 0.12s linear;
+}
+.skeleton-stage {
+  position: relative;
+  z-index: 1;
+}
+.skeleton-stage svg {
+  width: 100%;
+  overflow: visible;
+}
+.bone {
+  fill: none;
+  stroke: #312117;
+  stroke-width: 11;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  cursor: pointer;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0.65) translateY(25px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1),
+    stroke 0.25s;
+}
+.bone.is-dug {
+  opacity: 1;
+  transform: none;
+}
+.bone:hover,
+.bone:focus,
+.bone.active {
+  stroke: #f3ff84;
+  outline: none;
+  filter: drop-shadow(0 0 8px #eeff72);
+}
+.bone.skull {
+  transition-delay: 0.3s;
+}
+.bone.spine {
+  transition-delay: 0.12s;
+}
+.bone.ribs {
+  transition-delay: 0.2s;
+}
+.bone.tail {
+  transition-delay: 0s;
+}
+.bone.legs {
+  transition-delay: 0.35s;
+}
+.bone.arms {
+  transition-delay: 0.45s;
+}
+.dust {
+  position: absolute;
+  border-radius: 50%;
+  background: #e9c581;
+  filter: blur(5px);
+  opacity: calc(1 - var(--bone-build, 0));
+  pointer-events: none;
+}
+.dust-a {
+  width: 120px;
+  height: 70px;
+  left: 17%;
+  top: 32%;
+  animation: dust 3s ease-in-out infinite;
+}
+.dust-b {
+  width: 90px;
+  height: 45px;
+  right: 15%;
+  bottom: 25%;
+  animation: dust 4s ease-in-out 1s infinite;
+}
+@keyframes dust {
+  50% {
+    transform: translate(25px, -15px) scale(1.4);
+    opacity: 0.2;
+  }
+}
+@media (max-width: 700px) {
+  .excavation {
+    height: 210vh;
+  }
+  .excavation-sticky {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    padding: 17vw 7vw 11vw;
+  }
+  .excavation-copy h2 {
+    font-size: 4rem;
+  }
+  .excavation-copy > p:not(.kicker) {
+    margin: 18px 0;
+  }
+  .bone-note {
+    min-height: 55px;
+  }
+  .skeleton-stage {
+    align-self: center;
+    transform: scale(1.27);
+    width: 100%;
+    margin-top: 10vh;
+  }
+  .bone-progress {
+    left: 7vw;
+    bottom: 5vh;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bone {
+    opacity: 1;
+    transform: none;
+  }
+  .excavation {
+    height: auto;
+  }
+  .excavation-sticky {
+    position: relative;
+    min-height: 700px;
+  }
+}
