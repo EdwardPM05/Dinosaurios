@@ -1,0 +1,127 @@
+.field-film {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.72fr) minmax(28rem, 1.28fr);
+  gap: clamp(2rem, 7vw, 9rem);
+  align-items: center;
+  padding: clamp(6rem, 12vw, 11rem) 7vw;
+  overflow: hidden;
+  color: #f3f3df;
+  background:
+    radial-gradient(circle at 69% 38%, rgba(205, 255, 70, 0.12), transparent 28rem),
+    #061a12;
+}
+
+.field-film::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  opacity: 0.48;
+  background-image: radial-gradient(rgba(216, 255, 70, 0.36) 0.7px, transparent 0.7px);
+  background-size: 8px 8px;
+  mask-image: linear-gradient(90deg, #000, transparent 62%);
+}
+
+.field-film-copy,
+.field-film-frame {
+  position: relative;
+  z-index: 1;
+}
+
+.field-film-copy h2 {
+  max-width: 8ch;
+  margin: 1.1rem 0 1.6rem;
+  font-size: clamp(3.4rem, 6.5vw, 7.8rem);
+  letter-spacing: -0.08em;
+  line-height: 0.84;
+}
+
+.field-film-copy h2 em {
+  color: #d5ff43;
+}
+
+.field-film-copy > p:not(.section-kicker) {
+  max-width: 28rem;
+  color: rgba(243, 243, 223, 0.72);
+}
+
+.field-film-meta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.4rem;
+  color: #d5ff43;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.field-film-frame {
+  min-height: 21rem;
+  padding: 0.8rem;
+  border: 1px solid rgba(213, 255, 67, 0.45);
+  background: #102a1c;
+  box-shadow: 1.2rem 1.2rem 0 rgba(213, 255, 67, 0.1);
+}
+
+.dinosaur-film {
+  display: block;
+  width: 100%;
+  min-height: 20rem;
+  max-height: 36rem;
+  background: #07140e;
+  object-fit: cover;
+}
+
+.film-corner,
+.film-credit {
+  position: absolute;
+  z-index: 2;
+  font-family: var(--mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.film-corner {
+  top: 1.7rem;
+  left: 1.7rem;
+  padding: 0.42rem 0.56rem;
+  color: #d5ff43;
+  background: rgba(3, 18, 11, 0.72);
+}
+
+.film-credit {
+  right: 1.7rem;
+  bottom: 1.7rem;
+  padding: 0.42rem 0.56rem;
+  color: #f3f3df;
+  text-decoration: none;
+  background: rgba(3, 18, 11, 0.72);
+}
+
+.film-credit:hover,
+.film-credit:focus-visible {
+  color: #d5ff43;
+}
+
+@media (max-width: 760px) {
+  .field-film {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 5.5rem 1.5rem;
+  }
+
+  .field-film-copy h2 {
+    font-size: clamp(3.2rem, 16vw, 5.6rem);
+  }
+
+  .field-film-frame {
+    min-height: 0;
+    box-shadow: 0.75rem 0.75rem 0 rgba(213, 255, 67, 0.1);
+  }
+
+  .dinosaur-film {
+    min-height: 13rem;
+  }
+}

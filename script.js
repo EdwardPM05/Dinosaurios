@@ -134,6 +134,34 @@ document.querySelectorAll(".species-card").forEach((card) => {
   card.addEventListener("click", () => card.classList.toggle("is-flipped"));
 });
 
+document.querySelectorAll(".era-motion-toggle").forEach((button) => {
+  button.addEventListener("click", async () => {
+    const panel = button.closest(".era-panel");
+    const active = panel.classList.toggle("media-playing");
+    const video = panel.querySelector("video.era-motion");
+
+    if (video) {
+      if (active) {
+        try {
+          await video.play();
+        } catch {
+          panel.classList.remove("media-playing");
+          button.setAttribute("aria-pressed", "false");
+          button.firstChild.textContent = "Activar paisaje ";
+          return;
+        }
+      } else {
+        video.pause();
+      }
+    }
+
+    button.setAttribute("aria-pressed", String(active));
+    button.firstChild.textContent = active
+      ? "Pausa paisaje "
+      : "Activar paisaje ";
+  });
+});
+
 const surface = document.querySelector(".huella");
 const surfaceTitle = document.querySelector(".surface-title");
 if (surface && surfaceTitle) {

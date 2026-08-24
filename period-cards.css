@@ -1,35 +1,4 @@
 /* Cards compactas para las eras y nuevas escenas visuales. */
-.hero-three {
-  position: absolute;
-  z-index: 1;
-  right: 4vw;
-  top: 15%;
-  width: min(34vw, 31rem);
-  height: min(50vh, 31rem);
-  pointer-events: none;
-  mix-blend-mode: screen;
-  filter: drop-shadow(0 20px 28px rgba(235, 163, 44, 0.32));
-}
-.hero-image {
-  z-index: 0;
-}
-.hero-vignette {
-  z-index: 2;
-}
-.hero-copy,
-.hero-meta,
-.hero-signal {
-  z-index: 3;
-}
-@media (max-width: 700px) {
-  .hero-three {
-    width: 70vw;
-    height: 43vh;
-    right: -12vw;
-    top: 17%;
-    opacity: 0.64;
-  }
-}
 .manifesto {
   position: relative;
 }
@@ -138,6 +107,56 @@
   inset: 0;
   background-size: cover;
   background-position: center;
+}
+.era-motion {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.55s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+.era-panel:hover .era-motion,
+.era-panel.media-playing .era-motion {
+  opacity: 1;
+}
+.era-motion-toggle {
+  position: absolute;
+  right: 1.35rem;
+  bottom: 1.25rem;
+  z-index: 2;
+  border: 1px solid rgba(237, 240, 220, 0.55);
+  border-radius: 999px;
+  background: rgba(4, 16, 10, 0.46);
+  backdrop-filter: blur(8px);
+  padding: 0.55rem 0.7rem 0.55rem 0.85rem;
+  color: #edf0dc;
+  font: 9px var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.era-motion-toggle span {
+  display: inline-grid;
+  place-items: center;
+  width: 17px;
+  height: 17px;
+  margin-left: 0.35rem;
+  border-radius: 50%;
+  background: #d5ff43;
+  color: #152118;
+  font-size: 12px;
+}
+.era-panel.media-playing .era-motion-toggle {
+  background: #d5ff43;
+  color: #152118;
+}
+.era-panel.media-playing .era-motion-toggle span {
+  background: #152118;
+  color: #d5ff43;
 }
 .triassic .era-art {
   background-image: url("assets/images/card-triassic.png");

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="excavation.css" />
     <link rel="stylesheet" href="species-cards.css" />
     <link rel="stylesheet" href="period-cards.css" />
+    <link rel="stylesheet" href="video-section.css" />
   </head>
   <body>
     <div class="progress"><i></i></div>
@@ -34,7 +35,6 @@
     </header>
     <main id="top">
       <section class="hero scene">
-        <canvas class="hero-three" aria-hidden="true"></canvas>
         <div class="hero-image parallax" data-speed="-.10"></div>
         <div class="hero-vignette"></div>
         <div class="hero-orb orb-one"></div>
@@ -96,6 +96,17 @@
         </div>
         <article class="era-panel triassic">
           <div class="era-art parallax" data-speed=".035"></div>
+          <video
+            class="era-motion"
+            muted
+            loop
+            playsinline
+            preload="none"
+            poster="assets/images/card-triassic.png"
+            aria-label="Paisaje del Triásico en movimiento"
+          >
+            <source src="https://cdn.coverr.co/videos/coverr-traveling-down-a-road-394/1080p.mp4" type="video/mp4" />
+          </video>
           <div class="era-shade"></div>
           <div class="era-content reveal">
             <p class="era-index">I — 252 / 201 Ma</p>
@@ -111,9 +122,23 @@
             </div>
           </div>
           <div class="era-number">01</div>
+          <button class="era-motion-toggle" type="button" aria-pressed="false">
+            Activar paisaje <span>↗</span>
+          </button>
         </article>
         <article class="era-panel jurassic">
           <div class="era-art parallax" data-speed="-.045"></div>
+          <video
+            class="era-motion"
+            muted
+            loop
+            playsinline
+            preload="none"
+            poster="assets/images/card-jurassic.png"
+            aria-label="Paisaje del Jurásico en movimiento"
+          >
+            <source src="https://cdn.coverr.co/videos/coverr-forest-in-north-island-nz-8617/1080p.mp4" type="video/mp4" />
+          </video>
           <div class="era-shade"></div>
           <div class="era-content reveal">
             <p class="era-index">II — 201 / 145 Ma</p>
@@ -129,9 +154,23 @@
             </div>
           </div>
           <div class="era-number">02</div>
+          <button class="era-motion-toggle" type="button" aria-pressed="false">
+            Activar paisaje <span>↗</span>
+          </button>
         </article>
         <article class="era-panel cretaceous">
           <div class="era-art parallax" data-speed=".05"></div>
+          <video
+            class="era-motion"
+            muted
+            loop
+            playsinline
+            preload="none"
+            poster="assets/images/card-cretaceous.png"
+            aria-label="Paisaje del Cretácico en movimiento"
+          >
+            <source src="https://cdn.coverr.co/videos/coverr-forest-landscape-8507/1080p.mp4" type="video/mp4" />
+          </video>
           <div class="era-shade"></div>
           <div class="era-content reveal">
             <p class="era-index">III — 145 / 66 Ma</p>
@@ -147,7 +186,39 @@
             </div>
           </div>
           <div class="era-number">03</div>
+          <button class="era-motion-toggle" type="button" aria-pressed="false">
+            Activar paisaje <span>↗</span>
+          </button>
         </article>
+      </section>
+      <section class="field-film" id="avistamiento" aria-labelledby="field-film-title">
+        <div class="field-film-copy reveal">
+          <p class="section-kicker">Archivo en movimiento · 01</p>
+          <h2 id="field-film-title">Mira cómo el<br /><em>pasado camina.</em></h2>
+          <p>
+            Antes de los fósiles, hubo huellas frescas sobre la arena. Pulsa
+            reproducir y entra por un instante en su paisaje.
+          </p>
+          <div class="field-film-meta">
+            <span>SAURÓPODO · CGI</span>
+            <span>00:00:00:00</span>
+          </div>
+        </div>
+        <div class="field-film-frame reveal">
+          <video
+            class="dinosaur-film"
+            controls
+            playsinline
+            preload="metadata"
+            poster="assets/images/hero-mesozoic-v2.png"
+            aria-label="Video de un dinosaurio caminando por un paisaje desértico"
+          >
+            <source src="https://videos.pexels.com/video-files/4096297/4096297-hd_1280_720_25fps.mp4" type="video/mp4" />
+            Tu navegador no admite vídeo HTML5.
+          </video>
+          <div class="film-corner film-corner-top">REC · MESOZOICO</div>
+          <a class="film-credit" href="https://www.pexels.com/video/a-computer-generated-walking-dinosaur-4096297/" target="_blank" rel="noreferrer">Vídeo: Pexels ↗</a>
+        </div>
       </section>
       <section class="excavation" id="excavacion">
         <div class="excavation-sticky">
@@ -375,6 +446,5 @@
       </section>
     </main>
     <script src="script.js"></script>
-    <script type="module" src="three-scene.js"></script>
   </body>
 </html>
